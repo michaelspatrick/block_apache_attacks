@@ -80,7 +80,7 @@ Count: 7
 Run every 10 minutes:
 
 ```bash
-*/10 * * * * php /usr/local/bin/apache_attack_scan.php
+*/10 * * * * php /usr/local/bin/block_suspicious_attacks.php
 ```
 
 ---
