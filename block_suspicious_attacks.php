@@ -81,8 +81,6 @@ $whitelist = loadList($whitelistFile);
 $blockCounts = [];
 $logs = glob("$logDir/*access_log");
 
-$blockCounts["1.2.3.4"][] = ["/test", "domain.com"];
-
 foreach ($logs as $logFile) {
     $lines = explode(" ", trim(shell_exec("tail -n $tailLines " . escapeshellarg($logFile))));
     $domain = basename($logFile) === 'access_log' ? 'unmatched' : preg_replace('/-access_log.*/', '', basename($logFile));
